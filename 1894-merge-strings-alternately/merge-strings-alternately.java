@@ -5,13 +5,11 @@ class Solution {
     int len2 = word2.length();
     int i = 0;
     
-    while (i < len1 || i < len2){
-      if (i < len1) {
+    while (i < len1 || i < len2) {
+      if (i < len1) 
         sb.append(word1.charAt(i));
-      }
-      if (i < len2) {
+      if (i < len2) 
         sb.append(word2.charAt(i));
-      }
       i++;
     }
     
