@@ -1,20 +1,20 @@
 class Solution {
     public String mergeAlternately(String word1, String word2) {
-    StringBuilder result = new StringBuilder();
-    int index = 0;
+    StringBuilder sb = new StringBuilder();
     int len1 = word1.length();
     int len2 = word2.length();
-
-    while (index < len1 || index < len2) {
-      if (index < len1) {
-        result.append(word1.charAt(index));
+    int i = 0;
+    
+    while (i < len1 || i < len2){
+      if (i < len1) {
+        sb.append(word1.charAt(i));
       }
-      if (index < len2) {
-        result.append(word2.charAt(index));
+      if (i < len2) {
+        sb.append(word2.charAt(i));
       }
-      index++;
+      i++;
     }
-
-    return result.toString();
+    
+    return sb.toString();
   }
 }
