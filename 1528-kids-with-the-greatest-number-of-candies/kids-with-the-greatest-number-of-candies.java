@@ -4,7 +4,9 @@ class Solution {
 
       int max = candies[0];
       for (int i = 1; i < candies.length; i++) {
-        max = Math.max(max, candies[i]);
+        if (candies[i] > max) {
+          max = candies[i];
+        }
       }
       for (int candy : candies) {
         result.add(candy + extraCandies >= max);
